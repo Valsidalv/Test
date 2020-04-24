@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register form</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">Register form</a>
+            </nav>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <button class="btn btn-link nav-link navbar_btnMail" id="btnMail">E-mail</button>
+                    </li>
+                    <li class="nav-item ">
+                        <button class="btn btn-link nav-link navbar_btnTel" id="btnTel">Telephone</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <form class="my-4 form-register">
+            <div class="form-register_inputs">
+                <div class="form-group hide form-register_mail" >
+                    <label for="mail">Email address</label>
+                    <input type="email" class="form-control" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" >
+                    <div class=form_mail-feedback></div>
+                </div>
+
+                <div class="form-group hide form-register_tel" id="tel-div">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" class="form-control" id="tel" pattern="^\d{3}-\d{3}-\d{4}$" >
+                    <span class="small">Format: ###-###-####</span>                    
+                </div>
+            </div>  
+
+            <div class="form-register_currencies my-3">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="euro" name="currency" class="custom-control-input" value="euro" required>
+                    <label class="custom-control-label" for="euro">Euro</label>
+                </div>
+
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="dollar" name="currency" class="custom-control-input" value="dollar" required>
+                    <label class="custom-control-label" for="dollar">Dollar</label>
+                </div>
+            </div>
+            
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="terms">
+                <label class="form-check-label" for="terms">Accept terms and conditions</label>
+            </div>
+
+
+            <input type="submit" class="btn btn-primary" id="sub" disabled>
+        </form>
+
+        <div class="form-register_info mx-auto text-center">Registration done.</div>
+        <div id="loader"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
